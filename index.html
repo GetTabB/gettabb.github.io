@@ -1,37 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Tab-B Website</title>
-</head>
-<body>
-    <h1>Tab-B Website</h1>
-    <p>Currently Doing: <span id="currentlyDoing">request</span></p>
-    <button id="updateButton">Update Arrays</button>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const currentlyDoing = document.getElementById("currentlyDoing");
-            const updateButton = document.getElementById("updateButton");
-
-            updateButton.addEventListener("click", () => {
-                // Simulate updating the arrays and currentlyDoing
-                const playingSites = ["Site A", "Site B"];
-                const workingSites = ["Site X", "Site Y"];
-                const newCurrentlyDoing = "update";
-
-                // Update the display
-                currentlyDoing.textContent = newCurrentlyDoing;
-
-                // Send data to the extension
-                chrome.runtime.sendMessage({
-                    action: "updateStorage",
-                    currentlyDoing: newCurrentlyDoing,
-                    playingSites,
-                    workingSites,
-                });
-            });
-        });
-    </script>
-</body>
+  </head>
+  <body>
+    <main>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
 </html>
